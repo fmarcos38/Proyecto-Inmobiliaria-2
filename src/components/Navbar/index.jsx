@@ -56,12 +56,12 @@ function NavbarConRedes() {
                         {/* menu SOLO Pantalla Grande*/}
                         <ul className='ul-menu-izq'>
                             <li>
-                                <NavLink to='#' >
+                                <NavLink to='/venta' >
                                     Venta
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='#' >
+                                <NavLink to='/alquiler' >
                                     Alquileres
                                 </NavLink>
                             </li>
@@ -78,9 +78,7 @@ function NavbarConRedes() {
                         </ul>
                     </div>
 
-                    <div className='colInf-3'>
-                        {/* searchBar para P.Grande */}
-                        <SearchBar/>
+                    <div className='colInf-3'>                        
                         {/* menu hambur P.Chica */}
                         <div
                             className={`menu-icon ${isOpen ? 'open' : ''}`}

@@ -1,55 +1,16 @@
 .cont-barra {
-    /* position: fixed; */ /* opcional fija o no */
+    /* position: fixed; 
     top: 0;
-    left: 0;
+    left: 0; */
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;    
     width: 150px;
-    height: 625px;    
+    height: auto;    
     background-color: #fff;
   }
   
-  .sidebar.open, .open {
-    
-    
-    
-  }
-  /* .sidebar.closed  --> este se concatena con .sidebar*/
-  .sidebar.closed, .closed {
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    background-color: #f36e6e;
-  }
-  
-  .toggle-button {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    color: #161515;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  .toggle-button p {
-
-  }
-  .p-Open{
-
-  }
-  .p-close{
-
-  }
-  .content {
-     /* Ajuste para dejar espacio cuando la barra está abierta */
-  }
   
   
   

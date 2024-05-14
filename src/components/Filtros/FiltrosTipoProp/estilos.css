@@ -1,0 +1,260 @@
+.cont-principal-filtros{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 186, 186);
+}
+.cont-filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cont-tipo-propiedad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.check-venta-alq{
+    margin-top: 40px;
+}
+.label-venta, .label-alq {
+    font-size: 40px;
+    font-family: 'Lato';
+    font-weight: 600;
+}
+.label-alq{
+    margin-left: 20px;
+}
+.input-venta, .input-alq{
+    transform: scale(1.5); /* agranda el tamaño del checkbox */
+    margin-left: 10px;
+}
+/* boton animado */
+button{
+    width: 100px;
+    height:35px;
+    background: black/* linear-gradient(to left top, #c32c71 50%, #b33771 50%) */;
+    border-style: none;
+    color:#fff;
+    font-size: 20px;
+    letter-spacing: 1px; /* espacio entre letras */
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .5s;
+    margin: 3px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+.btn-props-dest{
+    width: 250px;
+    height:35px;
+    background: black/* linear-gradient(to left top, #c32c71 50%, #b33771 50%) */;
+    border-style: none;
+    color:#fff;
+    font-size: 20px;
+    /* letter-spacing: 3px; */ /* espacio entre letras */
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    margin: 3px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+    position: absolute;
+    display: block;
+}
+/* dibuja la linea borde-superior */
+button span:nth-child(1){
+    height: 2px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #f22ade);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}    
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
+}
+/* dibuja la linea derecha */
+button span:nth-child(2){
+    height: 70px;
+    width: 2px; /* ancho de la linea */
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f22ade);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+/* linea inf */
+button span:nth-child(3){
+    height:2px; /* achica grosor linea */
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f22ade);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
+/* line izq */
+button span:nth-child(4){
+    height:70px;
+    width:2px; /* ancho linea */
+    bottom:-70px;
+    left:0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #f22ade);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 1024px){
+    button{
+        width: 70px;
+        height:35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .btn-props-dest{
+        width: 180px;
+        height:35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 920px){
+    .cont-principal-filtros{
+        background: rgba(112, 233, 152, 0.904);
+        background: radial-gradient(circle, rgba(115, 233, 154, 0.893) 11%, rgba(207, 160, 223, 0.915) 100%);
+    }
+    .cont-tipo-propiedad{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont-filtros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .check-venta-alq{
+        margin: 0;
+    }
+    .label-venta, .label-alq {
+        font-size: 25px;
+        font-family: 'Lato';
+        font-weight: 600;
+    }
+    .input-venta, .input-alq{
+        transform: none;
+    }
+    /* boton animado */
+    button{
+        width: 90px;
+        height:25px;
+        font-size: 18px;
+    }
+    .btn-props-dest{
+        width: 230px;
+        height:25px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 450px){
+    .cont-principal-filtros{
+        width: 100%;
+        height: 170px;
+    }
+    .cont-filtros{
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    /* boton animado */
+    button{
+        width: 75px;
+        height:22px;
+        font-size: 15px;
+    }
+    .btn-props-dest{
+        width: 230px;
+        height:22px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 300px){
+    .cont-principal-filtros{
+        width: 100%;
+        height: 150px;
+    }
+    .label-venta, .label-alq {
+        font-size: 17px;
+    }
+    /* boton animado */
+    button{
+        width: 65px;
+        height:20px;
+        font-size: 12px;
+    }
+    .btn-props-dest{
+        width: 200px;
+        height:20px;
+        font-size: 15px;
+    }
+}

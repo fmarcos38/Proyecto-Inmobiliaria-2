@@ -1,0 +1,14 @@
+.cont-prop-Venta{
+    display: flex;
+}
+.cont-filtros-venta{
+    width: 10%;
+}
+.cont-titulo-props-venta{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
