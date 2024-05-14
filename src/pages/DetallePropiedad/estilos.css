@@ -7,7 +7,6 @@
     background-image: url('../../Imagenes/Mar-Del-Plata.webp');
     background-size: cover; /* Hace que la imagen de fondo cubra todo el div */
     background-position: center;
-    margin-top: 80px;
 }
 .cont-detail{
     width: 80%;

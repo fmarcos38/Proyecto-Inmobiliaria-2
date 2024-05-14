@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 620px;
-    margin: 75px 0 0 0;
+    /* margin: 75px 0 0 0; */
     background-image: url('https://em4ftgkgsyf.exactdn.com/wp-content/uploads/2022/06/1.jpeg?strip=all&lossy=1&ssl=1');
     background-size: cover; 
     background-position: center;
@@ -22,7 +22,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     background-color: #ffffff27;
@@ -47,19 +48,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
     color: #fff;
     border-top: 1px solid rgb(252, 249, 249);
     border-bottom: 1px solid rgb(249, 245, 245);
-    background-color: rgba(0, 0, 0, 0.268);
+    background-color: rgba(0, 0, 0, 0.347);
 }
 .text-inf{
     color: #fff;
 }
 .btn-land-inf{
     margin-bottom: 10px;
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
 }
-
+.cont-texto-socalo {
+    position: absolute;
+    top: 670px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: red;
+}
 /* estilos categorias */
 .cont-categorias{
     display: flex;

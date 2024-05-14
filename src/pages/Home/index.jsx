@@ -20,7 +20,7 @@ function Home() {
     }, [dispatch]);
 
     return (
-        <div className='contHome'>
+        <div>
             {
                 loadding ?
                 (
@@ -29,12 +29,18 @@ function Home() {
                         <div className='cont-home'>
                             {/* landing */}
                             <LandingPage />
+                            
                             {/* contenedor filtros y lista props */}
                             <div className='cont-filtros-listaProps'>
                                 {/* filtros */}
-                                <BarraLateral/>
+                                <div className='cont-barraL'>                                    
+                                    <BarraLateral />
+                                </div>
+                                
                                 {/* lista props */}
-                                <ListaPropiedades allProps={allProps} />
+                                <div className='cont-listaProps'>
+                                    <ListaPropiedades allProps={allProps} id='listaProps'/>
+                                </div>
                             </div>                            
                             {/* cotizaciones */}
                             <CotizacionDolar />

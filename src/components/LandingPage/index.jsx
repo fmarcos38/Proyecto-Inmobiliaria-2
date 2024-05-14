@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React  from 'react'
 import './styles.css';
-
-import iconoProps from '../../Imagenes/logoCasaDepto.jpg';
 import { Link } from 'react-router-dom';
+
 
 function LandingPage() {
 
@@ -34,13 +32,21 @@ function LandingPage() {
                             o si estás buscando invertir.                            
                         </b>
                     </p>
+                    {/* <Link to='#listaProps'>
                     <button className="btn-land-inf">
                         <b>
                             Conocé nuestras Propiedades
                         </b>
-                    </button>
+                        </button>
+                    </Link> */}
+                                        
                 </div>
-            </div>            
+            </div>
+
+            {/* texto inferior */}    
+            <div className='cont-texto-socalo'>
+                <p>Conocé nuestras Ptopiedades</p>
+            </div>        
         </div>
     )
 }
