@@ -1,0 +1,116 @@
+.contFooter{
+    /*
+    position: fixed;
+    bottom: 0; */ /*SI quiero q qde fija como pie de pag o en el view heigth*/
+    left: 0;
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    background-color: #787a78a4;
+}
+.footer {
+    width: 80%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer ul {
+    display: flex;
+    width: 100%;
+}
+footer .iso {
+    width: 70px;
+    height: auto;
+}
+footer ul li {
+    display: inline-block;
+    position: relative;
+    width: 35%;
+}
+footer ul li h2 {
+    display: block;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #ccc;
+}
+footer ul li h4 p {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #e3e8ea;
+    font-size: .833vw;
+    line-height: .9vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    vertical-align: middle;
+}
+footer ul li p {
+    display: block;
+    color: #e3e8ea;
+    font-size: small;
+}
+.divLinks{
+    display: flex;
+    flex-direction: column;
+}
+.contTodasMedidas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;  
+}
+.line {
+    margin-top: 10px;
+    width: 100%; /* Ancho de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #e3e8ea; /* Color de la línea */
+}
+footer span {
+    width: 90%;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .divF{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 20px;
+    }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    footer ul li {
+        display: block;        
+        position: relative;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    footer ul li h4 {
+        display: block;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+    }
+    footer ul li h4 p, footer ul li p, footer ul li .link {
+        font-size: 15px;
+        line-height: 17px;
+    }
+}
+
+

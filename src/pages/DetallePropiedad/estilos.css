@@ -1,0 +1,177 @@
+.contGralDetalle{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start; /* eje y */
+    background-image: url('../../Imagenes/Mar-Del-Plata.webp');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el div */
+    background-position: center;
+    margin-top: 80px;
+}
+.cont-detail{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(49, 51, 51);
+}
+.info-1{
+    width: 95%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: solid 1px black;
+    background-color: rgb(180, 243, 199);
+    border-radius: 20px;
+}
+.info-1 p{
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: large;
+}
+.cont-imgs-info{
+    width: 95%;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-imagenes{
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: black;
+}
+.info-textos{
+    width: 40%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 20px;
+    color: black;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.info-textos span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(180, 243, 199); 
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: large;  
+}
+.info-textos .cont-datos {
+    display: flex;
+
+}
+.info-textos p {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: large;
+    margin: 5px 0 5px 10px;
+}
+.info-textos b {
+    font-weight: 800;
+}
+.cont-descrip{
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+}
+.cont-map{
+    width: 70%;
+    height: 550px;
+    margin-top: 20px;
+}
+.cont-descrip, .cont-map p {
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: large;
+}
+.descrip{
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.descrip p{
+    padding: 10px;
+}
+
+/* responsive */
+@media screen and (max-width: 1000px){
+    .cont-imgs-info{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-imagenes{
+        width: 70%;
+    }
+    .info-imagenes, .info-textos{
+        width: 70%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 750px){
+    .cont-detail{
+        width: 89%;
+    }
+    .cont-imgs-info{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-imagenes{
+        width: 90%;
+    }
+    .info-imagenes, .info-textos{
+        width: 90%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .cont-descrip, .cont-map {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 650px){
+    .contGralDetalle{
+        background-image: none;
+        background-color: black;
+    }
+    .cont-detail{
+        width: 100%;
+    }
+    .cont-imgs-info{
+        width: 100%;
+        height: auto;
+    }
+    .info-imagenes, 
+    .info-textos,
+    .cont-descrip, 
+    .cont-map{
+        width: 95%;
+    }
+}
