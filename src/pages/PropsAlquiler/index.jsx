@@ -1,8 +1,8 @@
 import React from 'react';
 import './estilos.css';
 import { useSelector } from 'react-redux';
-import Filtros from '../../components/Filtros/FiltrosTipoProp';
 import ListaPropiedades from '../../components/ListaPropiedades';
+import BarraLateral from '../../components/Barra-Lateral';
 
 
 function PropsAlquiler() {
@@ -12,9 +12,15 @@ function PropsAlquiler() {
     
 
     return (
-        <div className='cont-propsVenta'>
-            <Filtros check={true}/>
-            <ListaPropiedades props={soloEnAlq} />
+        <div className='cont-prop-Venta'>
+            <div className='cont-filtros-venta'>
+                <BarraLateral/>
+            </div>
+
+            <div className='cont-titulo-props-venta'> 
+                <h1>Propiedades en Alquiler</h1>
+                <ListaPropiedades allProps={soloEnAlq} />
+            </div>            
         </div>
     )
 }

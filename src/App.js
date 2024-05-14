@@ -6,7 +6,7 @@ import Footbar from './components/Footbar';
 import Card from './components/Card';
 import DetalleProp from './pages/DetallePropiedad';
 import PropsVenta from './pages/PropsVenta';
-
+import PropsAlquiler from './pages/PropsAlquiler';
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/detalle/:id' element={<DetalleProp/>}/>
         <Route path='/venta' element={<PropsVenta/>} />
-        {/* <Route path='/alquiler' element={<PropsAlquiler/>} />
-        <Route path='/nosotros' element={<Nosotros/>} />
+        <Route path='/alquiler' element={<PropsAlquiler/>} />
+        {/*<Route path='/nosotros' element={<Nosotros/>} />
         <Route path='/contacto' element={<ContactForm/>} /> */}
 
         {/* rutas para el desarrollador */}
