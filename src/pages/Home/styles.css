@@ -1,4 +1,4 @@
-.cont-home{
+.cont-home{  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,11 +14,11 @@
   align-items: start;
   margin-top: 50px;
 }
-.cont-barraL{
-  width: auto;
+.cont-barraL{  
+  width: 15%;
 }
 .cont-listaProps{
-  width: auto;
+  width: 85%;
 }
 
 @media screen and (max-width: 650px){

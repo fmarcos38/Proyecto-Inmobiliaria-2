@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card';
 import './styles.css';
+import NoHayProps from '../NoHayProps';
 
 function ListaPropiedades({allProps}) {
 
@@ -32,7 +33,7 @@ function ListaPropiedades({allProps}) {
                         )
                     }) : (
                         <div className='no-props'>
-                            <h1>No hay props para dicha busqueda...</h1>
+                            <NoHayProps/>
                         </div>
                     )
                 }
