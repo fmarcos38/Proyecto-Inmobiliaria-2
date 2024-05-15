@@ -22,5 +22,17 @@
 }
 
 @media screen and (max-width: 650px){
-    
+  .cont-filtros-listaProps{
+    align-items: center;
+  }
+  .cont-filtros-listaProps{
+    display: flex;
+    flex-direction: column;
+  }
+  .cont-barraL{
+    width: 95%;
+  }
+  .cont-listaProps{
+    width: 95%;
+  }
 }

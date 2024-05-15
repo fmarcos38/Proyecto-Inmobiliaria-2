@@ -41,8 +41,8 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.cont-btn-filtros button {
-  min-width: 130px;
+.btn-filtros {
+  width: 130px;
   height: 40px;
   color: #fff;
   padding: 5px 10px;
@@ -57,9 +57,32 @@
   background-size: 120% auto;
   background-image: linear-gradient(315deg, #bdc3c7 0%, #2c3e50 75%);
 }
-.cont-btn-filtros button:hover {
+.btn-filtros:hover {
   background-position: right center;
 }
-.cont-btn-filtros button:active {
+.btn-filtros:active {
   top: 2px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 600px){
+  .cont-barra {
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  /* estilos 3er div */
+  .cont-btn-filtros {
+    width: 90%;
+    flex-direction: row; /* como usé flex-direction antes acá tamb SOLO q cambio x row */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .btn-filtros {
+    width: 80px;
+    height: 35px;
+    padding: 5px 5px;
+    margin: 5px;
+  }
 }
