@@ -1,11 +1,8 @@
 import React  from 'react'
 import './styles.css';
-import { Link } from 'react-router-dom';
 
 
 function LandingPage() {
-
-
 
     return (
         <div className='contGralLanding'>   
@@ -29,7 +26,7 @@ function LandingPage() {
                         <b>
                             Navegá por nuestras propiedades.
                             Encontrá tu proximo hogar, local para tu negocio,
-                            o si estás buscando invertir.                            
+                            o si estás buscando invertir, tenemos desarrollos propios.                            
                         </b>
                     </p>
                     {/* <Link to='#listaProps'>

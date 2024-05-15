@@ -66,7 +66,7 @@ function NavbarConRedes() {
                             </li>
                             <li>
                                 <NavLink to='/destacadas'>
-                                    Oportunidades
+                                    Destacadas
                                 </NavLink>
                             </li>
                             <li>
@@ -93,12 +93,25 @@ function NavbarConRedes() {
                                 isOpen && (
                                     <ul>
                                         <li>
+                                            <Link to='/venta'>
+                                                Venta
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/alquiler'>
+                                                Alquiler
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/destacadas'>
+                                                Destacadas
+                                            </Link>
+                                        </li>
+                                        <li>
                                             <Link to='/contacto'>
                                                 Contacto
                                             </Link>
                                         </li>
-                                        <li>Pepe</li>
-                                        <li>Salis?</li>
                                     </ul>
                                 )
                             }
