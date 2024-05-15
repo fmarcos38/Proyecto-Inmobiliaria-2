@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import SearchBar from '../SearchBar';
 
 
 function NavbarConRedes() {
@@ -66,12 +65,12 @@ function NavbarConRedes() {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='#' >
+                                <NavLink to='/destacadas'>
                                     Oportunidades
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='#' >
+                                <NavLink to='/contacto' >
                                     Contacto
                                 </NavLink>
                             </li>
@@ -93,7 +92,11 @@ function NavbarConRedes() {
                             {
                                 isOpen && (
                                     <ul>
-                                        <li>Hola</li>
+                                        <li>
+                                            <Link to='/contacto'>
+                                                Contacto
+                                            </Link>
+                                        </li>
                                         <li>Pepe</li>
                                         <li>Salis?</li>
                                     </ul>

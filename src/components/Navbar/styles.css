@@ -99,7 +99,9 @@ li {
     margin-right: 1.5rem;
     color: black;
 }
-a {
+/* quito line y cambio color etiqtas a y Link */
+a, Link{
+    color: black;
     text-decoration: none;
 }
 /* col 3 */
