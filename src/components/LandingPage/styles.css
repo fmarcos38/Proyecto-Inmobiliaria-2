@@ -28,6 +28,42 @@
     border-bottom: 1px solid black;
     background-color: #ffffff27;
 }
+/* para la animacion */
+.sub-cont-sup, .sub-cont-inf{
+    opacity: 0; /* Inicialmente, ocultamos los textos */
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}  
+.left-slide {
+    animation-name: slideFromLeft;
+}
+.right-slide {
+    animation-name: slideFromRight;
+}
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* fin estilos animación */
 .text, .text-inf{
     color: black;
     text-align: center;

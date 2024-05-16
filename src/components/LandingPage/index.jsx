@@ -8,7 +8,7 @@ function LandingPage() {
         <div className='contGralLanding'>   
             {/* cont superior */}
             <div className='cont-sup'>
-                <div className="sub-cont-sup">
+                <div className="sub-cont-sup left-slide">
                     <p className="text">
                         <b>
                             Somos una empresa con presencia en el Mercado Inmobiliario de Mar del Plata desde 1972.
@@ -21,7 +21,7 @@ function LandingPage() {
 
             {/* cont inf */}
             <div className='cont-inf'>
-                <div className="sub-cont-inf">
+                <div className="sub-cont-inf right-slide">
                 <p className="text-inf">
                         <b>
                             Navegá por nuestras propiedades.
