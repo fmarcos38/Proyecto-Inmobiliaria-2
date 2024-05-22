@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { filtraPrecio } from '../../Redux/Actions';
 import './styles.css';
 
-const PriceRangeFilter = () => {
+const FiltraPrecio = ({operacion}) => {
     const [minPrice, setMinPrice] = useState(10000);
     const [maxPrice, setMaxPrice] = useState(1000000);
     const dispatch = useDispatch();
@@ -20,10 +20,15 @@ const PriceRangeFilter = () => {
 
     /* para btn aplicar filtro precio */
     const handleClickFiltroPrecio = () => {
-        dispatch(filtraPrecio({
-            min: minPrice,
-            max: maxPrice
-        }));
+        dispatch(
+            filtraPrecio(
+                {
+                    min: minPrice,
+                    max: maxPrice,
+                    operacion: operacion
+                }                
+            )
+        );
     };
 
     return (
@@ -63,4 +68,4 @@ const PriceRangeFilter = () => {
     );
 };
 
-export default PriceRangeFilter;
+export default FiltraPrecio;

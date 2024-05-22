@@ -2,27 +2,27 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { filtraOperacionTipo, getProps, muestraDestacadas } from '../../Redux/Actions';
 import './estilos.css'; 
-
+import FiltraPrecio from '../FIltroRangoPrecio';
 
 
 const BarraLateral = () => {
 
     //estado para check venta
-    const [tipo, setTipo] = useState('all'); console.log("tipo: ", tipo)
+    const [operacion, setTipo] = useState('all'); 
     const dispatch = useDispatch();
     
     const handleFilterChange = (event) => {
         const { value } = event.target;
-        setTipo(value === tipo ? 'all' : value);
+        setTipo(value === operacion ? 'all' : value);
     };
 
     const handleClick = (e) => {
         switch (e.target.id) {
             case 'depto':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'depto' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'depto' }));
                 } else {
@@ -31,10 +31,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'casa':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'casa' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'casa' }));
                 } else {
@@ -43,10 +43,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'ph':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'ph' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'ph' }));
                 } else {
@@ -55,10 +55,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'local':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'local' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'local' }));
                 } else {
@@ -67,10 +67,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'terreno':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'terreno' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'terreno' }));
                 } else {
@@ -79,10 +79,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'oficina':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'oficina' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'oficina' }));
                 } else {
@@ -91,10 +91,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'cochera':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'cochera' }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'cochera' }));
                 } else {
@@ -103,10 +103,10 @@ const BarraLateral = () => {
                 }
                 break;
             case 'destacada':
-                if (tipo === 'venta') {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'venta', destacada: true }));
-                } else if (tipo === 'alquiler') {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'alquiler', destacada: true }));
                 } else {
@@ -124,18 +124,18 @@ const BarraLateral = () => {
 
     useEffect(() => {
         
-            if(tipo === 'all'){ dispatch(getProps()); }
-            if(tipo === 'venta'){ 
+            if(operacion === 'all'){ dispatch(getProps()); }
+            if(operacion === 'venta'){ 
                 dispatch(getProps());
                 dispatch(filtraOperacionTipo({ operacion: 'venta' })); 
             }
-            if(tipo === 'alquiler'){ 
+            if(operacion === 'alquiler'){ 
                 dispatch(getProps());
                 dispatch(filtraOperacionTipo({ operacion: 'alquiler' })); 
             }
         
         //dispatchAction();
-    }, [dispatch, tipo]);
+    }, [dispatch, operacion]);
 
     return (
         <div className='cont-barra' >
@@ -149,7 +149,7 @@ const BarraLateral = () => {
                     id='venta'
                         type="checkbox" 
                         value="venta" 
-                        checked={tipo === 'venta'} 
+                        checked={operacion === 'venta'} 
                         onChange={handleFilterChange}
                         className='input-check-venta'
                     />
@@ -158,7 +158,7 @@ const BarraLateral = () => {
                     id='alquiler'
                         type="checkbox" 
                         value="alquiler" 
-                        checked={tipo === 'alquiler'} 
+                        checked={operacion === 'alquiler'} 
                         onChange={handleFilterChange}
                         className='input-check-alq' 
                     />
@@ -175,7 +175,9 @@ const BarraLateral = () => {
                 <button className='btn-filtros'  id='destacada' onClick={(e) => handleClick(e)}>Destacadas</button>
                 <button className='btn-filtros' id='todas'  onClick={(e) => handleClick(e)}>Todas</button>
             </div>
-        </div>
+
+            <FiltraPrecio operacion={operacion}/>
+        </div>        
     );
 };
 

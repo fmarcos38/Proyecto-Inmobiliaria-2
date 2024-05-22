@@ -81,10 +81,11 @@ export default function rootReducer (state = initialState, action) {
             };
         case FILTRA_PRECIO:
             const allPropsP = [...propiedades];
-            let result = allPropsP.filter(prop => (prop.precio > action.payload.min) && (prop.precio < action.payload.max));
+            let resultPropsPrecio = allPropsP.filter(prop => (prop.precio >= action.payload.min)  && (prop.precio <= action.payload.max));
+            let resultPropsTipo = resultPropsPrecio.filter(prop => prop.operacion === action.payload.operacion);
             return{
                 ...state,
-                propiedades: result
+                propiedades: resultPropsTipo
             }
             default:
             return state;
