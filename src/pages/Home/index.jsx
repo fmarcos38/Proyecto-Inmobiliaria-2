@@ -7,7 +7,7 @@ import Loading from '../../components/Loading';
 import CotizacionDolar from '../../components/CotizacionDolar';
 import { getProps } from '../../Redux/Actions';
 import BarraLateral from '../../components/Barra-Lateral';
-import MenuHamburguesa from '../../components/MenuHamburgesa';
+
 
 function Home() {
 
@@ -42,7 +42,8 @@ function Home() {
                                 <div className='cont-listaProps'>
                                     <ListaPropiedades allProps={allProps} id='listaProps'/>
                                 </div>
-                            </div>                            
+                            </div> 
+
                             {/* cotizaciones */}
                             <CotizacionDolar />
                         </div>
