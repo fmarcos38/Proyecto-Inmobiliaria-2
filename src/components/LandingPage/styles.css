@@ -28,6 +28,7 @@
     border-bottom: 1px solid black;
     background-color: #ffffff27;
 }
+
 /* para la animacion */
 .sub-cont-sup, .sub-cont-inf{
     opacity: 0; /* Inicialmente, ocultamos los textos */
@@ -51,7 +52,6 @@
         transform: translateX(0);
     }
 }
-
 @keyframes slideFromRight {
     from {
         opacity: 0;
@@ -64,6 +64,33 @@
     }
 }
 /* fin estilos animación */
+
+.logo-landing{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    animation: fadeIn 3s ease-in-out; /* desvanecimiento */ 
+    /* animation: zoom 3s infinite; */ /* zoom */
+}
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Animación de zoom */
+/* @keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+} */
+
 .text, .text-inf{
     color: black;
     text-align: center;
@@ -175,6 +202,17 @@
         align-items: center;
         margin: 0;
         background-color: #ffffff8e;
+    }
+    .cont-logo-landing{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-landing{
+        width: 150px;
+        height: 150px;
+
     }
     .text, .text-inf{
         color: black;

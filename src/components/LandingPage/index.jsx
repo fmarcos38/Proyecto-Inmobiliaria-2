@@ -1,12 +1,12 @@
 import React  from 'react'
 import './styles.css';
-
+import logo from '../../Imagenes/Logo-Flor-2.jpg';
 
 function LandingPage() {
 
     return (
         <div className='contGralLanding'>   
-            {/* cont superior */}
+            {/* cont texto 1 */}
             <div className='cont-sup'>
                 <div className="sub-cont-sup left-slide">
                     <p className="text">
@@ -18,8 +18,14 @@ function LandingPage() {
                     </p>
                 </div>
             </div>            
-
-            {/* cont inf */}
+            
+            {/* cont logo */}
+            <div className='cont-logo-landing'>
+                <img src={logo} alt='' className='logo-landing'/>
+            </div>
+            
+            
+            {/* cont texto 2 */}            
             <div className='cont-inf'>
                 <div className="sub-cont-inf right-slide">
                 <p className="text-inf">

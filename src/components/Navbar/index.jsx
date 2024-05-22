@@ -47,7 +47,7 @@ function NavbarConRedes() {
                         {/* logo */}                        
                         <NavLink to='/' >
                             {/* <img src={logo} alt='img not found' className='logo' /> */}
-                            <p className='logo'>Inmobiliaria <b>Mendive</b></p>
+                            <p className='logo'>Inmobiliaria <b style={{'fontSize':'20px'}}>FM</b></p>
                         </NavLink>
                     </div>
 

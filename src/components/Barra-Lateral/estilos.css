@@ -63,7 +63,9 @@
 .btn-filtros:active {
   top: 2px;
 }
-
+.label-precio-min-max{
+  color: #fff;
+}
 
 /* responsive */
 @media screen and (max-width: 600px){

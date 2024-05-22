@@ -2,6 +2,23 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { filtraOperacionTipo, getProps, muestraDestacadas } from '../../Redux/Actions';
 import './estilos.css'; // Importar estilos CSS
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import Typography from '@mui/material/Typography';
+/* genero el precio min y max y su rango */
+const MAX = 1000000;
+const MIN = 10000;
+const marks = [
+    {
+        value: MIN,
+        label: '',
+    },
+    {
+        value: MAX,
+        label: '',
+    },
+];
+
 
 const BarraLateral = () => {
 
@@ -9,6 +26,10 @@ const BarraLateral = () => {
     const [checkedVenta, setCheckedVenta] = useState(false);
     //estado para check alq
     const [checkedAlquiler, setCheckedAlquiler] = useState(false);
+    //estado para el filtro por precio Valor inicial array con rango de precios
+    const [precioMin, setPrecioMin] = React.useState(MIN);
+    const [precioMax, setPrecioMax] = React.useState(MAX);
+    console.log("min max:", `${precioMin} - ${precioMax}`);
     const dispatch = useDispatch();
 
     const handleClickVenta = (e) => {
@@ -144,6 +165,14 @@ const BarraLateral = () => {
                 break;
         }
     }
+    //onChange para rango de precio min    
+    const handleChangePMin = (_, newValue) => {
+        setPrecioMin(newValue);
+    };
+    const handleChangePMax = (_, newValue) => {
+        setPrecioMax(newValue);
+    };
+
 
     return (
         <div className='cont-barra' >
@@ -168,6 +197,63 @@ const BarraLateral = () => {
                 <button className='btn-filtros' id='cochera' onClick={(e) => handleClick(e)}>Cocheras</button>
                 <button className='btn-filtros'  id='destacada' onClick={(e) => handleClick(e)}>Destacadas</button>
                 <button className='btn-filtros' id='todas'  onClick={(e) => handleClick(e)}>Todas</button>
+                {/* filtro por precio */}
+                {/* precio MIN */}
+                <Box sx={{ width: 200 }}>
+                    <Slider
+                        marks={marks}
+                        step={10}
+                        value={precioMin}
+                        valueLabelDisplay="auto"
+                        min={MIN}
+                        max={MAX}
+                        onChange={handleChangePMin}
+                    />
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Typography
+                            variant="body2"
+                            onClick={() => setPrecioMin(MIN)}
+                            sx={{ cursor: 'pointer', color: 'white'}}
+                        >
+                            {MIN} min
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            onClick={() => setPrecioMin(MAX)}
+                            sx={{ cursor: 'pointer', color: 'white' }}
+                        >
+                            {MAX} max
+                        </Typography>
+                    </Box>
+                </Box>
+                {/* precio MAX */}
+                <Box sx={{ width: 200 }}>
+                    <Slider
+                        marks={marks}
+                        step={10}
+                        value={precioMax}
+                        valueLabelDisplay="auto"
+                        min={MIN}
+                        max={MAX}
+                        onChange={handleChangePMax}
+                    />
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Typography
+                            variant="body2"
+                            onClick={() => setPrecioMax(MIN)}
+                            sx={{ cursor: 'pointer', color: 'white' }}
+                        >
+                            {MIN} min
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            onClick={() => setPrecioMax(MAX)}
+                            sx={{ cursor: 'pointer', color: 'white' }}
+                        >
+                            {MAX} max
+                        </Typography>
+                    </Box>
+                </Box>
             </div>
         </div>
     );
