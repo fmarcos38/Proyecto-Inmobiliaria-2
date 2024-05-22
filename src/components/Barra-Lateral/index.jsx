@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { filtraOperacionTipo, getProps, muestraDestacadas } from '../../Redux/Actions';
+import { filtraOperacionTipo, filtraPrecio, getProps, muestraDestacadas } from '../../Redux/Actions';
 import './estilos.css'; // Importar estilos CSS
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
 /* genero el precio min y max y su rango */
 const MAX = 1000000;
 const MIN = 10000;
@@ -172,7 +174,13 @@ const BarraLateral = () => {
     const handleChangePMax = (_, newValue) => {
         setPrecioMax(newValue);
     };
-
+    /* para btn aplicar filtro precio */
+    const handleClickFiltroPrecio = () => {
+        dispatch(filtraPrecio({
+            min: precioMin,
+            max: precioMax
+        }));
+    }; 
 
     return (
         <div className='cont-barra' >
@@ -254,6 +262,13 @@ const BarraLateral = () => {
                         </Typography>
                     </Box>
                 </Box>
+                {/* btn aplicar filtro precio */}
+                <Button 
+                    variant="contained"
+                    onClick={() => {handleClickFiltroPrecio()}}
+                >
+                    Aplicar Filtro de Precios
+                </Button>
             </div>
         </div>
     );
