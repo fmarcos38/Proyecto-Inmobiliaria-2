@@ -6,6 +6,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import { colors } from '@mui/material';
 
 
 function NavbarConRedes() {
@@ -32,10 +33,10 @@ function NavbarConRedes() {
 
                     <div className='col2'>
                         <a href='https://www.instagram.com/florm.bienesraices/'>
-                            <InstagramIcon className='iconosRedes' />
+                        <InstagramIcon sx={{ color: 'white', backgroundColor: 'black', borderRadius: '10px'}} />
                         </a>
                         <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                            <WhatsAppIcon className='iconosRedes' />
+                            <WhatsAppIcon sx={{ color: 'white', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}}/>
                         </a>
                     </div>
                 </div>
@@ -47,12 +48,11 @@ function NavbarConRedes() {
                         {/* logo */}                        
                         <NavLink to='/' >
                             {/* <img src={logo} alt='img not found' className='logo' /> */}
-                            <p className='logo'>Inmobiliaria <b style={{'fontSize':'20px'}}>FM</b></p>
+                            <p className='texto-inmobiliaria'>Inmobiliaria <b style={{'fontSize':'28px'}}>FM</b></p>
                         </NavLink>
                     </div>
-
-                    <div className='colInf-2'>
-                        {/* menu SOLO Pantalla Grande*/}
+                    {/* menu SOLO Pantalla Grande*/}
+                    <div className='colInf-2'>                        
                         <ul className='ul-menu-izq'>
                             <li>
                                 <NavLink to='/venta' >
@@ -74,9 +74,14 @@ function NavbarConRedes() {
                                     Contacto
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to='/nosotros' >
+                                    Nosotros
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
-
+                   {/* menu hambur y desplegable P.Chica */}
                     <div className='colInf-3'>                        
                         {/* menu hambur P.Chica */}
                         <div
@@ -93,23 +98,28 @@ function NavbarConRedes() {
                                 isOpen && (
                                     <ul>
                                         <li>
-                                            <Link to='/venta'>
+                                            <Link to='/venta' style={{color: 'white'}}>
                                                 Venta
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to='/alquiler'>
+                                            <Link to='/alquiler' style={{color: 'white'}}>
                                                 Alquiler
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to='/destacadas'>
+                                            <Link to='/destacadas' style={{color: 'white'}}>
                                                 Destacadas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to='/contacto'>
+                                            <Link to='/contacto' style={{color: 'white'}}>
                                                 Contacto
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/nosotros' style={{color: 'white'}}>
+                                                Nosotros
                                             </Link>
                                         </li>
                                     </ul>

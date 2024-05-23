@@ -4,7 +4,7 @@ import './estilos.css';
 function CotizacionDolar() {
     return (
         <div className='cont-grlCotizaciones'>
-            <p>COTIZACIONES USD</p>
+            <p>Cotización USD</p>
             <div className='cont-cotizaciones'>
                 {/* dolar blue */}
                 <div>

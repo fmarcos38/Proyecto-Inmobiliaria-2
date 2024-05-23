@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Logo from '../../Imagenes/Logo-Flor-2.jpg';
 import { Link } from 'react-router-dom';
 
 function Footbar() {
@@ -9,13 +10,12 @@ function Footbar() {
         <footer className='contFooter'>
             <div className="footer">
                 <div className='divF'>
+                    {/* logo */}
                     <a href='/home'>
-                        <img
-                            src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found'
-                            className='iso'
-                        />
+                        <img src={Logo} alt='' className='logo-footbar' />
                     </a>
                     <ul>
+                        {/* Contactanos */}
                         <li>
                             <h2>
                                 <p>CONTACTANOS</p>
@@ -31,26 +31,30 @@ function Footbar() {
                                 <br></br>
                             </p>
                         </li>
-
+                        {/* Links */}
                         <li>
                             <h2>
                                 <p>Links</p>
                             </h2>
                             <div className='divLinks'>
-                                <Link>Ventas</Link>
-                                <Link>Alquileres</Link>
-                                <Link>Locales</Link>
+                                <Link to={'/venta'} className='link-footbar'>Ventas</Link>
+                                <Link to={'/alquiler'} className='link-footbar'>Alquileres</Link>
+                                <Link to={'/destacadas'} className='link-footbar'>Destacadas</Link>
+                                <Link to={'/contacto'} className='link-footbar'>Contacto</Link>
+                                <Link to={'/nosotros'} className='link-footbar'>Nosotros</Link>
                             </div>
                         </li>
-
-                        <li>
+                        {/* Redes */}
+                        <li>                            
                             <h2><p>Seguinos</p></h2>
-                            <a href='https://www.instagram.com/florm.bienesraices/'>
-                                <InstagramIcon className='iconosRedes' />
-                            </a>
-                            <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                                <WhatsAppIcon className='iconosRedes' />
-                            </a>
+                            <div className='cont-iconos-redes'>
+                                <a href='https://www.instagram.com/florm.bienesraices/'>
+                                    <InstagramIcon sx={{ fontSize: 40, color: 'grey', backgroundColor: 'black', borderRadius: '10px'}} />
+                                </a>
+                                <a href='http://api.whatsapp.com/send?phone=2234422665'>
+                                    <WhatsAppIcon sx={{ fontSize: 40, color: 'green', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}} />
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -67,55 +71,3 @@ function Footbar() {
 }
 
 export default Footbar;
-
-
-
-/*
-
-<div className='contFoot'>
-                
-                <div className="col1">
-                    <a href='/home'>
-                        <img src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found' className='logoFooter' />
-                    </a>
-                </div>
-                
-                <div className="col2">
-                    <div className='tituloCategFoot'>
-                        <h2>CONTACTANOS</h2>
-                        <div className="line"></div>
-                    </div>
-                    
-                    <p>Belgrano 2214 - Mar del Plata</p>
-                    <p>Teléfono (0223) 4915977</p>
-                    <p>Whatsapp +54 9 (223) 6349596</p>
-                    <p>info@belluccipropiedades.com</p>
-                </div>
-
-                <div className="col2">
-                    <div className='tituloCategFoot'>
-                        <h2>LINKS</h2>
-                        <div className="line"></div>
-                    </div>
-                    
-                    <Link>Ventas</Link>
-                    <Link>Alquileres</Link>
-                    <Link>Locales</Link>
-                    
-                </div>
-                
-                <div className="column col4">
-                    <div className='redesFoot'>
-                        <h2>SEGUINOS EN</h2>
-                        <a href='https://www.instagram.com/florm.bienesraices/'>
-                            <InstagramIcon className='iconosRedes' />
-                        </a>
-                        <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                            <WhatsAppIcon className='iconosRedes' />
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-*/

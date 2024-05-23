@@ -130,9 +130,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: red;
+    background-color: rgb(7, 7, 7);
 }
-
+.cont-texto-socalo p {
+    color: #fff;
+}
 /* reponsive */
 @media (max-width: 800px) {
     .contGralLanding{ /* el padre de este cont es el de HOME */

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(53, 52, 52);
 }
 .cont-cotizaciones{
     width: 90%;
@@ -11,6 +12,11 @@
     align-items: center;
     margin-top: 5px;
     margin-bottom: 20px;
+}
+.cont-grlCotizaciones p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
 }
 .dolarBlue {
     width: 320px;

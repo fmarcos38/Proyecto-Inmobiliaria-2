@@ -1,16 +1,17 @@
 .contFooter{
-    
-        
+    /*
+    position: fixed;
+    bottom: 0; */ /*SI quiero q qde fija como pie de pag o en el view heigth*/
+    /* left: 0; */
     width: 100%;  
     display: flex;
     flex-direction: column;
     justify-content: center;  
     align-items: center;
-    background-color: #787a78a4;
+    background-color: black;
 }
 .footer {
     width: 80%;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,39 +26,44 @@ footer ul {
     display: flex;
     width: 100%;
 }
-footer .iso {
-    width: 70px;
-    height: auto;
+.logo-footbar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
 footer ul li {
     display: inline-block;
     position: relative;
     width: 35%;
 }
+/* color linea sup */
 footer ul li h2 {
     display: block;
     margin-bottom: 3px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(200, 200, 93);
 }
 footer ul li h4 p {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    color: #e3e8ea;
     font-size: .833vw;
     line-height: .9vw;
     text-transform: uppercase;
     font-weight: 800;
     vertical-align: middle;
 }
+/* color letras */
 footer ul li p {
     display: block;
-    color: #e3e8ea;
+    color: rgb(200, 200, 93);
     font-size: small;
 }
 .divLinks{
     display: flex;
     flex-direction: column;
+}
+.link-footbar{
+    color: rgb(200, 200, 93);
 }
 .contTodasMedidas{
     display: flex;
@@ -66,11 +72,12 @@ footer ul li p {
     align-items: center;
     width: 80%;  
 }
+/* color linea inferior */
 .line {
     margin-top: 10px;
     width: 100%; /* Ancho de la línea */
     height: 1px; /* Grosor de la línea */
-    background-color: #e3e8ea; /* Color de la línea */
+    background-color: rgb(200, 200, 93); /* Color de la línea */
 }
 footer span {
     width: 90%;
@@ -79,13 +86,17 @@ footer span {
     margin-bottom: 5px;
 }
 
-
 @media screen and (max-width: 600px) {
-    .divF{
+    .divF {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-right: 20px;
+    }
+    .logo-footbar {
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
     }
     footer ul {
         display: flex;
@@ -100,14 +111,20 @@ footer span {
         width: 90%;
         margin-bottom: 10px;
     }
-    footer ul li h4 {
-        display: block;
-        margin-bottom: 5px;
-        border-bottom: 1px solid #ccc;
+    .divLinks{
+        justify-content: center;
+        align-items: center;
     }
     footer ul li h4 p, footer ul li p, footer ul li .link {
         font-size: 15px;
         line-height: 17px;
+        display: flex;
+        justify-content: center;
+    }
+    .cont-iconos-redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
