@@ -50,7 +50,7 @@ export const isOpenModalPicture = () => {
 };
 
 //filtra por precio min y max
-export const filtraPrecio =(data) => {console.log("data", data)
+export const filtraPrecio =(data) => {
     return function(dispatch){
         dispatch({type: FILTRA_PRECIO, payload: data});
     }
