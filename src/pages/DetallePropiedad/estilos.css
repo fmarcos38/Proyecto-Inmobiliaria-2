@@ -29,7 +29,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-style: solid 1px black;
-    background-color: rgb(180, 243, 199);
+    background-color: rgba(244, 84, 52, 0.942);
     border-radius: 20px;
 }
 .info-1 p{
@@ -43,15 +43,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 .info-imagenes{
-    width: 60%;
+    width: 65%;
     height: 100%;
     border-radius: 10px;
     background-color: black;
 }
 .info-textos{
-    width: 40%;
+    width: 35%;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -87,10 +88,35 @@
 .info-textos b {
     font-weight: 800;
 }
+/* cont descr y form */
+.cont-titulo-descripcion-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 95%;
+}
 .cont-descrip{
-    width: 70%;
-    height: auto;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 65%;
+    height: 380px;    
+    background-color: #fff;
+    border-radius: 20px;
+}
+.titulo-descrip-prop {
+    color: #070707;
+    font-size: 30px;
+    margin: 0;
+    padding: 5px;
+}
+.p-descrip{
+    padding: 5px;
+    color: black;
+}
+/* para formulario */
+.formulario-detalle{
+    width: 35%;
 }
 .cont-map{
     width: 70%;
@@ -159,7 +185,7 @@
     .contGralDetalle{
         background-image: none;
         background-color: black;
-    }
+    }    
     .cont-detail{
         width: 100%;
     }
@@ -169,8 +195,19 @@
     }
     .info-imagenes, 
     .info-textos,
-    .cont-descrip, 
     .cont-map{
         width: 95%;
+    }
+    .cont-titulo-descripcion-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .cont-descrip{
+        width: 94%;
+        border-radius: 20px;
+        background-color: rgba(244, 84, 52, 0.942);
     }
 }

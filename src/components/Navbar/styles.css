@@ -26,7 +26,7 @@ nav {
     display: flex;
     justify-content: center;    
     align-items: center;
-    color: #fff;
+    color: var(--primary-color);
 }
 .col1 {
     width: 60%;
@@ -38,8 +38,9 @@ nav {
 .navSup .redes .col1 p {
     font-size: small;
 }
-.navSup .redes .col1 .iconoContact {
+.iconoContact {
     font-size: large;
+    margin-left: 5px;
 }
 .col2 {
     display: flex;
@@ -48,10 +49,9 @@ nav {
     flex-grow: 1; /* La segunda columna ocupará el espacio restante */
     height: 100%; /* Color de fondo para visualización */
 }
-.navSup .redes .col2 .iconosRedes{
-    font-size:larger;
-    color: black;
-    background-color: #fff;
+.iconoInsta, .iconoWhatsApp{
+    color: var(--primary-color);
+    font-size: large;
 }
 
 /* cont nav inferior menu */
@@ -61,7 +61,7 @@ nav {
     display: flex;
     justify-content: center;    
     align-items: center;
-    background-color: #fff;
+    background-color: #0c0c0c;
 }
 .cont-nav-inf{
     display: grid;
@@ -103,7 +103,7 @@ li {
 }
 /* quito line y cambio color etiqtas a y Link */
 a, Link{
-    color: black;
+    color: var(--primary-color);
     text-decoration: none;
 }
 /* col 3 */

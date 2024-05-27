@@ -10,6 +10,7 @@ import PropsAlquiler from './pages/PropsAlquiler';
 import Contactanos from './pages/Contactanos';
 import Nosotros from './pages/Nosotros';
 import PropsDestacadas from './pages/Destacadas';
+import ListaFavoritos from './pages/Favoritos';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/destacadas' element={<PropsDestacadas/>} />
         <Route path='/nosotros' element={<Nosotros/>} />
         <Route path='/contacto' element={<Contactanos/>} />
+        <Route path='/favoritos' element={<ListaFavoritos/>} />
 
         {/* rutas para el desarrollador */}
         <Route path='/card' element={<Card/>}/>

@@ -45,27 +45,20 @@ function Footbar() {
                             </div>
                         </li>
                         {/* Redes */}
-                        <li>                            
+                        <li>
                             <h2><p>Seguinos</p></h2>
                             <div className='cont-iconos-redes'>
                                 <a href='https://www.instagram.com/florm.bienesraices/'>
-                                    <InstagramIcon sx={{ fontSize: 40, color: 'grey', backgroundColor: 'black', borderRadius: '10px'}} />
+                                    <InstagramIcon className='icono-redes-foot' />
                                 </a>
                                 <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                                    <WhatsAppIcon sx={{ fontSize: 40, color: 'green', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}} />
+                                    <WhatsAppIcon className='icono-redes-foot' />
                                 </a>
                             </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-            
-            <div className='contTodasMedidas'>
-                <div className='line'></div>
-                <span>
-                    Todas las medidas enunciadas son meramente orientativas, las medidas exactas serán las que se expresen en el respectivo título de propiedad de cada inmueble. Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales..
-                </span>
-            </div>
+            </div>         
         </footer>
     )
 }

@@ -7,6 +7,7 @@ import Loading from '../../components/Loading';
 import CotizacionDolar from '../../components/CotizacionDolar';
 import { getProps } from '../../Redux/Actions';
 import BarraLateral from '../../components/Barra-Lateral';
+import WhatsAppButton from '../../components/BotonWhastApp';
 
 
 function Home() {
@@ -46,6 +47,9 @@ function Home() {
 
                             {/* cotizaciones */}
                             <CotizacionDolar />
+
+                            {/* bitón whatsApp */}
+                            <WhatsAppButton/>
                         </div>
                     )
             }

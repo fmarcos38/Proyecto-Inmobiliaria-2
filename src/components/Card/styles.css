@@ -14,6 +14,7 @@
     font-family: roboto;
     text-align: center;
     margin: 0 20px 20px 0;
+    border-radius: 15px;
 }
 /* espacio titulo */
 .card-title {
@@ -21,8 +22,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(243, 247, 244);
-    background-color: rgb(19, 19, 19);;
+    color: rgb(6, 6, 6);
+    background-color: rgba(187, 193, 193, 0.74);
+    border-radius: 15px 15px 0 0;
     
 }
 /* manejo espacio img */
@@ -100,10 +102,11 @@
     grid-area: info2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(187, 193, 193, 0.74);
 }
 .div-info2{
-    width: 100%;
-    background-color: rgba(187, 193, 193, 0.74);
+    width: 100%;    
 }
 .info2 {
     margin: 3px;
@@ -112,7 +115,7 @@
 /* responsive */
 @media screen and (max-width: 950px) {
     .contCard {
-        grid-template-columns: 450px;
+        grid-template-columns: auto;
     }
 }
 @media screen and (max-width: 700px) {

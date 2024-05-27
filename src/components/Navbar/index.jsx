@@ -6,7 +6,6 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import { colors } from '@mui/material';
 
 
 function NavbarConRedes() {
@@ -33,10 +32,10 @@ function NavbarConRedes() {
 
                     <div className='col2'>
                         <a href='https://www.instagram.com/florm.bienesraices/'>
-                        <InstagramIcon sx={{ color: 'white', backgroundColor: 'black', borderRadius: '10px'}} />
+                        <InstagramIcon className='iconoInsta'/>
                         </a>
                         <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                            <WhatsAppIcon sx={{ color: 'white', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}}/>
+                            <WhatsAppIcon className='iconoWhatsApp'/>
                         </a>
                     </div>
                 </div>
@@ -48,7 +47,7 @@ function NavbarConRedes() {
                         {/* logo */}                        
                         <NavLink to='/' >
                             {/* <img src={logo} alt='img not found' className='logo' /> */}
-                            <p className='texto-inmobiliaria'>Inmobiliaria <b style={{'fontSize':'28px'}}>FM</b></p>
+                            <p className='texto-inmobiliaria'><b style={{'fontSize':'28px'}}>FM</b> Propiedades</p>
                         </NavLink>
                     </div>
                     {/* menu SOLO Pantalla Grande*/}
@@ -77,6 +76,11 @@ function NavbarConRedes() {
                             <li>
                                 <NavLink to='/nosotros' >
                                     Nosotros
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/favoritos' >
+                                    Favoritos
                                 </NavLink>
                             </li>
                         </ul>

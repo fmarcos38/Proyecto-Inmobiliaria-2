@@ -2,9 +2,10 @@ import React from 'react'
 import './styles.css';
 import { useDispatch } from 'react-redux';
 import { isOpenModalPicture } from '../../Redux/Actions';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import CarruselModal from '../CarruselModal';
 
-function Modal({imgProp}) {
+
+function Modal({imagenes}) {
 
     
     const dispatch = useDispatch();
@@ -15,13 +16,17 @@ function Modal({imgProp}) {
 
     return (
         <div className='contModal'>
-            <button
-                className='btn-close-modal'
-                onClick={() => handleOnclickClose()}
-            >
-                <HighlightOffIcon/>
-            </button>
-            <img src={imgProp} alt='not f' className='imgProp' />
+            <div className='cont-btn-cierra-modal'>
+                <button
+                    className='btn-close-modal'
+                    onClick={() => handleOnclickClose()}
+                >
+                    <b>X</b>
+                </button>
+            </div>
+
+            {/* carrusel de imgs */}
+            <CarruselModal imagenes={imagenes}/>
         </div>
     )
 }

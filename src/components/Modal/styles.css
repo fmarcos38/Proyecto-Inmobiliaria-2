@@ -4,8 +4,25 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 90vh;
+    height: 90%;
+    margin-top: 10px;
     background-color: black;
+}
+.cont-btn-cierra-modal{
+    width: 70px;
+    position: relative;
+    top: 30px;
+    right: -540px;
+    z-index: 1;
+}
+.btn-close-modal{
+    border-radius: 50%;
+    border: none;
+    width: auto;
+    height: auto;
+    background-color: aqua;
+    cursor: pointer;
+    font-size: 20px;
 }
 .imgProp{
     width: 90%;

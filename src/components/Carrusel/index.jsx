@@ -71,7 +71,7 @@ function Carrusel({imagenes}) {
             {
                 isOpen && (
                     <div className='modal-overlay'>
-                        <Modal imgProp={prop.imagenes[indexImgActual]}/>
+                        <Modal /* imgProp={prop.imagenes[indexImgActual]} */imagenes={prop.imagenes}/>
                     </div>
                 )
             }

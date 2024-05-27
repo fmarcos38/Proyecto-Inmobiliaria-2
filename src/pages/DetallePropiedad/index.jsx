@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { detalleProp, resetDetalle } from '../../Redux/Actions';
 import Carrusel from '../../components/Carrusel';
 import MapProp from '../../components/MapaProp';
+import FormularioContacto from '../../components/FormularioContacto';
 
 function DetalleProp(){
 
@@ -80,11 +81,15 @@ function DetalleProp(){
                     </div>
                 </div>
 
-                {/* descrip prop */}
-                <div className='cont-descrip'>
-                    <p>Descripción Propiedad</p>
-                    <div className='descrip'>
-                        <p>{detalle_prop.descripcion_Detalle}</p>
+                {/* descrip prop y form contacto*/}
+                <div className='cont-titulo-descripcion-form'>
+                    <div className='cont-descrip'>
+                        <p className='titulo-descrip-prop'>Descripción Propiedad</p>
+                        <p className='p-descrip'>{detalle_prop.descripcion_Detalle}</p>
+                    </div>
+                    {/* formulario contacto */}
+                    <div className='cont-formulario-detalle'>
+                        <FormularioContacto />
                     </div>
                 </div>
                 

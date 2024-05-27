@@ -51,7 +51,11 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
 
                 <div className='cont-precio-fav'>
                     <p className='precio'>
-                        <strong>USD {precio}</strong>
+                        {
+                            operacion === 'venta' ?
+                            <strong>USD {precio}</strong> :
+                            <strong>$ {precio}</strong>
+                        }
                     </p>
                     <Favorito id={id} />
                 </div>
@@ -59,37 +63,37 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
             
             {/* info 2 */}
             <div className='card-info2'>
-                        <div className='div-info2'>
-                            <p className='info2'>
-                                <img src={iconoSup} alt='' style={{ 'width': '20px', 'height': '20px', 'color': 'black', 'marginTop': '5px' }} />
-                            </p>
-                            <p className='info2'>Superficie</p>
-                            <p className='info2'>{sup}m2</p>
-                        </div>
+                <div className='div-info2'>
+                    <p className='info2'>
+                        <img src={iconoSup} alt='' style={{ 'width': '20px', 'height': '20px', 'color': 'black', 'marginTop': '5px' }} />
+                    </p>
+                    <p className='info2'>Superficie</p>
+                    <p className='info2'>{sup}m2</p>
+                </div>
 
-                        <div className='div-info2'>
-                            <p className='info2'>
-                                <img src={iconoAmb} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
-                            </p>
-                            <p className='info2'>Ambientes</p>
-                            <p className='info2'>{ambientes}</p>
-                        </div>
+                <div className='div-info2'>
+                    <p className='info2'>
+                        <img src={iconoAmb} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
+                    </p>
+                    <p className='info2'>Ambientes</p>
+                    <p className='info2'>{ambientes}</p>
+                </div>
 
-                        <div className='div-info2'>
-                            <p className='info2'>
-                                <img src={iconoDor} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
-                            </p>
-                            <p className='info2'>Dormitorios</p>
-                            <p className='info2'>{dormitorios}</p>
-                        </div>
+                <div className='div-info2'>
+                    <p className='info2'>
+                        <img src={iconoDor} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
+                    </p>
+                    <p className='info2'>Dormitorios</p>
+                    <p className='info2'>{dormitorios}</p>
+                </div>
 
-                        <div className='div-info2'>
-                            <p className='info2'>
-                                <img src={iconoBañ} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
-                            </p>
-                            <p className='info2'>Baños</p>
-                            <p className='info2'>{baños}</p>
-                        </div>
+                <div className='div-info2'>
+                    <p className='info2'>
+                        <img src={iconoBañ} alt='' style={{ 'width': '20px', 'height': '20px', 'marginTop': '5px' }} />
+                    </p>
+                    <p className='info2'>Baños</p>
+                    <p className='info2'>{baños}</p>
+                </div>
             </div>
         </div>
     )

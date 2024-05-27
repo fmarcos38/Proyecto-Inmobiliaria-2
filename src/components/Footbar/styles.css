@@ -40,7 +40,7 @@ footer ul li {
 footer ul li h2 {
     display: block;
     margin-bottom: 3px;
-    border-bottom: 1px solid rgb(200, 200, 93);
+    border-bottom: 1px solid var(--primary-color);
 }
 footer ul li h4 p {
     display: inline-block;
@@ -55,15 +55,16 @@ footer ul li h4 p {
 /* color letras */
 footer ul li p {
     display: block;
-    color: rgb(200, 200, 93);
+    color: var(--primary-color);
     font-size: small;
 }
 .divLinks{
     display: flex;
     flex-direction: column;
 }
+/* color par los Link */
 .link-footbar{
-    color: rgb(200, 200, 93);
+    color: var(--primary-color);
 }
 .contTodasMedidas{
     display: flex;
@@ -77,25 +78,38 @@ footer ul li p {
     margin-top: 10px;
     width: 100%; /* Ancho de la línea */
     height: 1px; /* Grosor de la línea */
-    background-color: rgb(200, 200, 93); /* Color de la línea */
-}
-footer span {
-    width: 90%;
-    font-size: smaller;
-    margin-top: 5px;
+    background-color: var(--primary-color); /* Color de la línea */
+    
     margin-bottom: 5px;
 }
+.icono-redes-foot{
+    font-size: xx-large;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px){
+    .footer {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 750px){
+    footer ul li {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 650px) {
     .divF {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        margin-right: 20px;
     }
     .logo-footbar {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
         margin-top: 20px;
     }
     footer ul {

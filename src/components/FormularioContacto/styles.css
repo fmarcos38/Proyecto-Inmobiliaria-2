@@ -10,14 +10,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 500px;
-    color: #fff;
-    background-color: rgba(242, 97, 68, 0.893);
+    /* width: 500px;
+    height: 500px; */
+    color: black;
+    background-color: #fff;
     border-radius: 20px;
 }
 .div-cont-form h1 {
     margin: 0;
+    padding: 5px;
 }
 .form__group {
     position: relative;
@@ -58,7 +59,7 @@
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #faf9fb, #212021);
+    border-image: linear-gradient(to right, #03f7ef, #212021);
     border-image-slice: 1;
 }
 .form__field:focus~.form__label {
@@ -80,18 +81,18 @@
     height: auto;
 } */
 .btn-enviar-contacto{
-    margin-top: 30px;
+    margin: 20px 0 10px 0;
 }
 
 @media screen and (max-width: 550px){
     .cont-formulario {
-        width: 95%;
+        width: 100%;
         height: auto;
         margin: 20px 0 20px 0;
     }
     .div-cont-form {
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        height: auto;
         background-color: rgba(244, 84, 52, 0.942);
     }
 }
