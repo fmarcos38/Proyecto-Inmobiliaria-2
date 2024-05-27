@@ -26,9 +26,7 @@
     border-bottom: 1px solid black;
     background-color: #ffffff27;
 }
-.texto-sup{
 
-}
 /* para la animacion */
 .sub-cont-sup, .sub-cont-inf{
     opacity: 0; /* Inicialmente, ocultamos los textos */

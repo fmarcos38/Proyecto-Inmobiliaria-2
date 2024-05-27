@@ -165,15 +165,15 @@ const BarraLateral = () => {
             </div>
 
             <div className='cont-btn-filtros'>
-                <button className='btn-filtros' id='depto' onClick={(e) => handleClick(e)}>Deptos</button>
-                <button className='btn-filtros' id='casa' onClick={(e) => handleClick(e)}>Casas</button>
-                <button className='btn-filtros' id='ph' onClick={(e) => handleClick(e)}>PH</button>
-                <button className='btn-filtros' id='local' onClick={(e) => handleClick(e)}>Locales</button>
-                <button className='btn-filtros' id='terreno' onClick={(e) => handleClick(e)}>Terrenos</button>
-                <button className='btn-filtros' id='oficina' onClick={(e) => handleClick(e)}>Oficinas</button>
-                <button className='btn-filtros' id='cochera' onClick={(e) => handleClick(e)}>Cocheras</button>
-                <button className='btn-filtros'  id='destacada' onClick={(e) => handleClick(e)}>Destacadas</button>
-                <button className='btn-filtros' id='todas'  onClick={(e) => handleClick(e)}>Todas</button>
+                <button className='boton-filtros' id='depto' onClick={(e) => handleClick(e)}>Deptos</button>
+                <button className='boton-filtros' id='casa' onClick={(e) => handleClick(e)}>Casas</button>
+                <button className='boton-filtros' id='ph' onClick={(e) => handleClick(e)}>PH</button>
+                <button className='boton-filtros' id='local' onClick={(e) => handleClick(e)}>Locales</button>
+                <button className='boton-filtros' id='terreno' onClick={(e) => handleClick(e)}>Terrenos</button>
+                <button className='boton-filtros' id='oficina' onClick={(e) => handleClick(e)}>Oficinas</button>
+                <button className='boton-filtros' id='cochera' onClick={(e) => handleClick(e)}>Cocheras</button>
+                <button className='boton-filtros'  id='destacada' onClick={(e) => handleClick(e)}>Destacadas</button>
+                <button className='boton-filtros' id='todas'  onClick={(e) => handleClick(e)}>Todas</button>
             </div>
 
             <FiltraPrecio operacion={operacion}/>
