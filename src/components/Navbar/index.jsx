@@ -47,7 +47,7 @@ function NavbarConRedes() {
                         {/* logo */}                        
                         <NavLink to='/' >
                             {/* <img src={logo} alt='img not found' className='logo' /> */}
-                            <p className='texto-inmobiliaria'><b style={{'fontSize':'28px'}}>FM</b> Propiedades</p>
+                            <p className='texto-inmobiliaria'><b>FM</b> Propiedades</p>
                         </NavLink>
                     </div>
                     {/* menu SOLO Pantalla Grande*/}
@@ -85,8 +85,8 @@ function NavbarConRedes() {
                             </li>
                         </ul>
                     </div>
-                   {/* menu hambur y desplegable P.Chica */}
-                    <div className='colInf-3'>                        
+                    {/* menu hambur y desplegable P.Chica */}
+                    <div className='colInf-3'>
                         {/* menu hambur P.Chica */}
                         <div
                             className={`menu-icon ${isOpen ? 'open' : ''}`}
@@ -96,35 +96,22 @@ function NavbarConRedes() {
                             <span></span>
                             <span></span>
                         </div>
-                        {/* menu desplegable */}
-                        <div className="menu">
+                        {/* menu desplegable P.chica*/}
+                        <div className="menu-desplegable">
                             {
                                 isOpen && (
-                                    <ul>
-                                        <li>
-                                            <Link to='/venta' style={{color: 'white'}}>
-                                                Venta
-                                            </Link>
+                                    <ul className='na-lista-pChica'>
+                                        <li className='items-pChica'>
+                                            <Link to='/' className='link-navbar'>Home</Link>
                                         </li>
-                                        <li>
-                                            <Link to='/alquiler' style={{color: 'white'}}>
-                                                Alquiler
-                                            </Link>
+                                        <li className='items-pChica'>
+                                            <Link to='/venta' className='link-navbar'>Venta</Link>
                                         </li>
-                                        <li>
-                                            <Link to='/destacadas' style={{color: 'white'}}>
-                                                Destacadas
-                                            </Link>
+                                        <li className='items-pChica'>
+                                            <Link to='/alquiler' className='link-navbar'>Alquiler</Link>
                                         </li>
-                                        <li>
-                                            <Link to='/contacto' style={{color: 'white'}}>
-                                                Contacto
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/nosotros' style={{color: 'white'}}>
-                                                Nosotros
-                                            </Link>
+                                        <li className='items-pChica'>
+                                            <Link to='/nosotros' className='link-navbar'>Nosotros</Link>
                                         </li>
                                     </ul>
                                 )

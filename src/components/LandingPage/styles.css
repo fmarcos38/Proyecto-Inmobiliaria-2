@@ -1,8 +1,7 @@
 .contGralLanding{ /* el padre de este cont es el de HOME */
     position: relative; /* relative PARA el zocalo */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 620px;
     background-image: url('https://em4ftgkgsyf.exactdn.com/wp-content/uploads/2022/06/1.jpeg?strip=all&lossy=1&ssl=1');
@@ -10,25 +9,26 @@
     background-position: center;
 }  
 .cont-sup{
-    width: 50%;
-    height: 580px;
+    width: 100%;
+    height: 35%;
     display: flexbox;
-    justify-content: start;
-    align-items: start;    
+    align-items: start;
 }
 .sub-cont-sup{
-    width: 70%;
+    width: 40%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 40px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     background-color: #ffffff27;
 }
+.texto-sup{
 
+}
 /* para la animacion */
 .sub-cont-sup, .sub-cont-inf{
     opacity: 0; /* Inicialmente, ocultamos los textos */
@@ -64,10 +64,18 @@
     }
 }
 /* fin estilos animación */
-
+/* estilos cont logo */
+.cont-logo-landing{
+    width: 100%;
+}
+.sub-cont-logo-landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .logo-landing{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     animation: fadeIn 3s ease-in-out; /* desvanecimiento */ 
     /* animation: zoom 3s infinite; */ /* zoom */
@@ -91,34 +99,29 @@
     }
 } */
 
-.text, .text-inf{
-    color: black;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.4;
-}
+/* estilos cont y text inf */
 .cont-inf {
-    width: 50%;
-    height: 580px;
+    width: 100%;
+    height: 35%;
     display: flex;
     justify-content: end;
     align-items: end;
 }
 .sub-cont-inf{
-    width: 60%;
+    width: 40%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #fff;
     border-top: 1px solid rgb(252, 249, 249);
     border-bottom: 1px solid rgb(249, 245, 245);
     background-color: rgba(0, 0, 0, 0.347);
 }
-.text-inf{
+.texto-inf{
     color: #fff;
 }
 .cont-texto-socalo {
@@ -130,38 +133,24 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(8, 8, 8);
 }
 .cont-texto-socalo p {
-    color: #fff;
+    color: var(--primary-color);
 }
+
 /* reponsive */
-@media (max-width: 800px) {
-    .contGralLanding{ /* el padre de este cont es el de HOME */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;        
-    }
-    .cont-sup{
-        width: 100%;
-        height: 380px;
-        display: flexbox;
-        justify-content: start;
-        align-items: start;   
-    }
+@media (max-width: 950px) {
     .sub-cont-sup{
+        width: 55%;
         background-color: #dad4d488;
     }
-    .cont-inf {
-        width: 100%;
-        height: 380px;
-        display: flex;
-        justify-content: end;
-        align-items: end;
+    .logo-landing{
+        width: 150px;
+        height: 150px;
     }
     .sub-cont-inf{
-        width: 50%;
+        width: 55%;
         margin-bottom: 40px;
         background-color: rgba(0, 0, 0, 0.444);
     }
@@ -170,14 +159,6 @@
     }
 }
 @media screen and (max-width: 660px){
-    .text, .text-inf{
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.2;
-    }
-    .text-inf{
-        color: #fff;
-    }
     .cont-texto-socalo {
         width: 50%;
         height: 40px;
@@ -185,23 +166,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 20px;
-        background-color: red;
+        border-radius: 20px;        
     }
 }
-@media screen and (max-width: 450px){    
+@media screen and (max-width: 500px){    
     .cont-sup{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: start;
+        text-align: center;
         margin-top: 20px;            
     }
     .sub-cont-sup{
         width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin: 0;
         background-color: #ffffff8e;
     }
@@ -216,30 +193,18 @@
         height: 150px;
 
     }
-    .text, .text-inf{
-        color: black;
-        text-align: center;
-        font-size: 17px;
-        line-height: 1.2;
-    }
     .cont-inf {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: end;
+        text-align: center;
         margin-bottom: 30px;
     }
     .sub-cont-inf{
         width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-right: 0;
         background-color: rgba(0, 0, 0, 0.667);
     }
-    .text-inf{
-        color: #fff;
-    }    
     .cont-texto-socalo {
         width: 70%;
         height: 40px;

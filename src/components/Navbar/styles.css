@@ -8,7 +8,6 @@ nav {
     align-items: center;
     width: 100%;
     height: 5rem;
-    background-color: #fff;
     /* z-index: 1; */
 }
 /* cont nav Sup */
@@ -38,10 +37,7 @@ nav {
 .navSup .redes .col1 p {
     font-size: small;
 }
-.iconoContact {
-    font-size: large;
-    margin-left: 5px;
-}
+
 .col2 {
     display: flex;
     justify-content: end;    
@@ -118,7 +114,7 @@ a, Link{
 .menu-icon span {
     width: 100%;
     height: 3px;
-    background-color: #333;
+    background-color: var(--primary-color);
     transition: all 0.3s ease;
 }
 .menu-icon.open span:nth-child(2) {
@@ -130,18 +126,16 @@ a, Link{
 .menu-icon.open span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
-/* menu desplegable del hambur*/
-.menu {
+.menu-desplegable {
     position: absolute;
-    top: 70px;
-    right: 1;
-    background-color: #333;
+    top: 80px;
+    right: 0;
+    background: rgb(53, 53, 53);
     width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
-    z-index: 1;
+    z-index: 3;
 }
 .menu ul {
     list-style: none;
@@ -151,57 +145,66 @@ a, Link{
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+.link-navbar{
+    color: var(--primary-color);
+    text-decoration: none;
+}
 .menu li:hover {
-    background: #eaeaea;
+    background: var(--background-color);
+}
+.items-pChica{
+    margin: 10px 0 10px 0;
 }
 
 /* responsive */
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1200px) {
     .menu-icon {
         display: none;
     }
-}
+    .texto-inmobiliaria {
+        font-size: 17px;
+    }
+    .cont-nav-inf{ /* usando flexbox */
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .colInf-2 {
+        flex: 1;
+        min-width: 300px;
+    }
+    .ul-menu-izq {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-@media screen and (max-width: 1024px){    
-    
     li {
         list-style: none;
-        margin-right: 0.5rem;
-        font-size: medium;
-    }
-    
-}
-
-@media screen and (max-width: 975px) {
-    
-    .conteiner-navbar{        
-        width: 95%;       
-    }
-    .logo{
-        font-size: large;
-    }
-    .contIzq{
-        width: 60%;
-        font-size: small;
-    }
-    .contDer{
-        font-size: small;
+        font-size: 17px;
+        font-weight: 500;
     }
 }
 
-@media screen and (max-width: 825px) {
-    
-    .conteiner-navbar{        
-        width: 95%;       
+@media screen and (max-width: 950px){    
+    nav{
+        height: 4rem;
     }
-    .navSup .redes .col1 p {
-        font-size: small;
+    .navSup{
+        height: 1.5rem;
     }
-    .navSup .redes .col1 .iconoContact {
+    .iconoContact {
         font-size: medium;
+        margin-left: 5px;
     }
-    .navSup .redes .col2 .iconosRedes{
-        font-size: medium;
+    .navInf{
+        height: 2.5rem;
+    }
+    li {
+        list-style: none;
+        margin-right: 1.5rem;
+        color: black;
+        font-size: 15px;
+        font-weight: 450;
     }
 }
 
@@ -209,10 +212,23 @@ a, Link{
     .colInf-2{
         display: none;
     }
+    .cont-nav-inf{ /* usando flexbox */
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
     .menu-icon span {
         width: 100%;
         height: 3px;
-        background-color: #050505;
+        background-color: var(--primary-color);
         transition: all 0.3s ease;
     }
 }
@@ -221,7 +237,6 @@ a, Link{
     /* nav Sup */
     .navSup{
         width: 100%;
-        height: 3rem;
     }
     .redes{
         width: 100%;
@@ -238,18 +253,5 @@ a, Link{
     .cont-nav-inf{
         grid-template-columns: 1fr 1fr;
         width: 90%;
-    }
-    /* menu hambur pantalla chica*/
-    .menu-icon {
-        width: 30px;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-    }
-    .menu {        
-        top: 80px;
-        right: 0;
     }
 }
