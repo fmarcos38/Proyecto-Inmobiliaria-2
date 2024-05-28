@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './styles.css';
 import { propiedades } from '../../Helps/propiedades';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
@@ -32,7 +32,6 @@ function Carrusel({imagenes}) {
     };
     const handleOpenModal = () => {
         dispatch(isOpenModalPicture());
-        console.log("clickSobreImg");
     };
     
     return (
@@ -43,7 +42,7 @@ function Carrusel({imagenes}) {
                     <ArrowBackIosNewIcon />
                 </button>
 
-                {/* imagen a ostrar */}
+                {/* imagen a mostrar */}
                 <img src={prop.imagenes[indexImgActual]} alt='' className='img-carrusel' onClick={() => handleOpenModal()}/>
 
                 {/* btn prox */}
@@ -75,6 +74,7 @@ function Carrusel({imagenes}) {
                     </div>
                 )
             }
+            
         </div>
     )
 }

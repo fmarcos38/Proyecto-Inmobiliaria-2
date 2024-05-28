@@ -11,29 +11,34 @@ import Contactanos from './pages/Contactanos';
 import Nosotros from './pages/Nosotros';
 import PropsDestacadas from './pages/Destacadas';
 import ListaFavoritos from './pages/Favoritos';
+import { InmobiliariaProvider } from './Context';
+import ModalVideo from './components/ModalVideo';
 
 function App() {
   return (
-    <div className="App">      
-    {/*--------- navbar------ */}
-      <Navbar/>
+    <InmobiliariaProvider>
+      <div className="App">
+        {/*--------- navbar------ */}
+        <Navbar />
 
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/detalle/:id' element={<DetalleProp/>}/>
-        <Route path='/venta' element={<PropsVenta/>} />
-        <Route path='/alquiler' element={<PropsAlquiler/>} />
-        <Route path='/destacadas' element={<PropsDestacadas/>} />
-        <Route path='/nosotros' element={<Nosotros/>} />
-        <Route path='/contacto' element={<Contactanos/>} />
-        <Route path='/favoritos' element={<ListaFavoritos/>} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/detalle/:id' element={<DetalleProp />} />
+          <Route path='/venta' element={<PropsVenta />} />
+          <Route path='/alquiler' element={<PropsAlquiler />} />
+          <Route path='/destacadas' element={<PropsDestacadas />} />
+          <Route path='/nosotros' element={<Nosotros />} />
+          <Route path='/contacto' element={<Contactanos />} />
+          <Route path='/favoritos' element={<ListaFavoritos />} />
 
-        {/* rutas para el desarrollador */}
-        <Route path='/card' element={<Card/>}/>
-      </Routes>
+          {/* rutas para el desarrollador */}
+          <Route path='/card' element={<Card />} />
+          <Route path='/modalVideo' element={<ModalVideo/>} />
+        </Routes>
 
-      <Footbar/>
-    </div>
+        <Footbar />
+      </div>
+    </InmobiliariaProvider>
   );
 }
 

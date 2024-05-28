@@ -29,13 +29,77 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-style: solid 1px black;
-    background-color: rgba(244, 84, 52, 0.942);
     border-radius: 20px;
 }
-.info-1 p{
+.cont-btns-atras-video{
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+}
+.btn-volver,
+.btn-video {
+    display: flex;
+    align-items: center;
+    width: auto;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin-right: 5px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: medium;
+    cursor: pointer;
+}
+.btn-video:hover,
+.btn-volver:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
+.tooltip {
+    visibility: visible;
+    background-color: rgb(221, 8, 8);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150; /* Position the tooltip above the button */
+    left: 26%;
+    margin-left: -60px; /* Center the tooltip */
+    width: 120px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+.tooltipVolver {
+    visibility: visible;
+    background-color: rgb(221, 8, 8);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150; /* Position the tooltip above the button */
+    left: 26%;
+    margin-left: -60px; /* Center the tooltip */
+    width: 120px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+.cont-info-titulo{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+}
+.cont-info-titulo p{
     font-family: Poppins;
     font-weight: 800;
     font-size: large;
+    color: var(--primary-color);
+    margin-left: 10px;
 }
 .cont-imgs-info{
     width: 95%;
@@ -70,7 +134,8 @@
     width: 100%;
     height: 50px;
     border-radius: 10px 10px 0 0;
-    background-color: rgb(180, 243, 199); 
+    color: var(--primary-color);
+    background-color: rgba(63, 62, 62, 0.7); 
     font-family: Poppins;
     font-weight: 800;
     font-size: large;  

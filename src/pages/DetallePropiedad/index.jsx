@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './estilos.css';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,13 +6,42 @@ import { detalleProp, resetDetalle } from '../../Redux/Actions';
 import Carrusel from '../../components/Carrusel';
 import MapProp from '../../components/MapaProp';
 import FormularioContacto from '../../components/FormularioContacto';
+import { InmobiliariaContext } from '../../Context';
+import ModalVideo from '../../components/ModalVideo';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 function DetalleProp(){
 
     const detalle_prop = useSelector(state => state.detalleProp);//propiedades[0];
     const dispatch = useDispatch();
     const { id } = useParams();  //let id = props.match.params.id 
+    const contexto = useContext(InmobiliariaContext); 
+    //estado para el tooltipText
+    const [showTooltipVideo, setShowTooltipVideo] = useState(false);
+    //estado para el tooltipText
+    const [showTooltipVolver, setShowTooltipVolver] = useState(false);
+    const tooltipTextVideo = "Ver video propiedad";
+    const tooltipTextVolver = "Volver a resultados";
 
+    const handleMouseEnter = () => {
+        setShowTooltipVideo(true);
+    };
+    const handleMouseLeave = () => {
+        setShowTooltipVideo(false);
+    };
+    const handleMouseEnterVolver = () => {
+        setShowTooltipVolver(true);
+    };
+    const handleMouseLeaveVolver = () => {
+        setShowTooltipVolver(false);
+    };
+
+    const handleClickAtras = () => {
+        window.history.back();
+    };
+    
 
     useEffect(() => {
         dispatch(detalleProp(id));
@@ -26,9 +55,37 @@ function DetalleProp(){
             <div className='cont-detail'>
                 {/* datos principales */}
                 <div className='info-1'>
-                    <p>{detalle_prop.operacion}</p>
-                    <p>{detalle_prop.tipo}</p>
-                    <p>USD {detalle_prop.precio}</p>
+                    <div className='cont-btns-atras-video'>
+                        <button 
+                            onClick={() => handleClickAtras()} 
+                            className='btn-volver'
+                            onMouseEnter={handleMouseEnterVolver}
+                            onMouseLeave={handleMouseLeaveVolver}
+                        >
+                            <ArrowBackIcon/>
+                        </button>
+                        {/* msj toolTip */}
+                        {
+                            showTooltipVolver && <div className="tooltipVolver">{tooltipTextVolver}</div>
+                        }
+                        <button 
+                            onClick={() => contexto.handleIsOpen()} 
+                            className='btn-video'
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <OndemandVideoIcon className='icono-video'/>
+                        </button>
+                        {/* msj toolTip */}
+                        {
+                            showTooltipVideo && <div className="tooltip">{tooltipTextVideo}</div>
+                        }
+                    </div>
+                    <div className='cont-info-titulo'>
+                        <p>VENTA</p>
+                        <p> - </p>
+                        <p>USD {detalle_prop.precio}</p>
+                    </div>
                 </div>
 
                 {/* carrusel y datos */}
@@ -98,6 +155,11 @@ function DetalleProp(){
                     <p>Ubicacion Propiedad</p>
                     <MapProp direccionProp={detalle_prop.direccion}/>
                 </div>
+
+                {/* Modal Video */}
+                {
+                    contexto.isOpenModalVideo && <ModalVideo/>
+                }
             </div>
         </div>
     )

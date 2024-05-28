@@ -7,13 +7,22 @@ export const InmobiliariaContext = createContext();
 export const InmobiliariaProvider = ({children}) => {
 
     //estado para menú hamburguesa
-    const [ menuHamburOpen, setMenuHamburOpen ] = useState(false);
-    console.log("menuOp: ", menuHamburOpen)
+    const [ isOpenModalVideo, setisOpenModalVideo ] = useState(false);
+    console.log("estadoM:", isOpenModalVideo)
+
+    const handleIsOpen = () => {
+        setisOpenModalVideo(true);
+    }
+    const handleIsClose = () => {
+        setisOpenModalVideo(false);
+    }
+
     return (
         <InmobiliariaContext.Provider 
             value={{
-                menuHamburOpen,
-                setMenuHamburOpen,
+                isOpenModalVideo,
+                handleIsOpen,
+                handleIsClose,
             }}
         >
             {children}
