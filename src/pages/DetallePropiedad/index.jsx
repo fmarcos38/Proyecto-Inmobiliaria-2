@@ -56,6 +56,7 @@ function DetalleProp(){
                 {/* datos principales */}
                 <div className='info-1'>
                     <div className='cont-btns-atras-video'>
+                        {/* btn-atrás */}
                         <button 
                             onClick={() => handleClickAtras()} 
                             className='btn-volver'
@@ -68,17 +69,24 @@ function DetalleProp(){
                         {
                             showTooltipVolver && <div className="tooltipVolver">{tooltipTextVolver}</div>
                         }
-                        <button 
-                            onClick={() => contexto.handleIsOpen()} 
-                            className='btn-video'
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <OndemandVideoIcon className='icono-video'/>
-                        </button>
-                        {/* msj toolTip */}
+                        {/* btn-video */}
                         {
-                            showTooltipVideo && <div className="tooltip">{tooltipTextVideo}</div>
+                            detalle_prop.video && (
+                                <>
+                                    <button
+                                        onClick={() => contexto.handleIsOpen()}
+                                        className='btn-video'
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <OndemandVideoIcon className='icono-video' />
+                                    </button>
+                                    {/* msj toolTip */}
+                                    {
+                                        showTooltipVideo && <div className="tooltip">{tooltipTextVideo}</div>
+                                    }
+                                </>
+                            )
                         }
                     </div>
                     <div className='cont-info-titulo'>

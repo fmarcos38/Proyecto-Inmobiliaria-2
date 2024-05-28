@@ -254,6 +254,12 @@
     .cont-detail{
         width: 100%;
     }
+    .cont-info-titulo{
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
     .cont-imgs-info{
         width: 100%;
         height: auto;
