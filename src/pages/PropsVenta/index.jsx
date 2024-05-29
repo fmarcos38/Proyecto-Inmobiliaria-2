@@ -9,18 +9,22 @@ function PropsVenta() {
 
     const props = useSelector(state => state.propiedades);
     const soloEnVenta = props.filter(p => p.operacion === 'venta');
-    console.log("propsV:", soloEnVenta)
 
     return (
         <div className='cont-prop-Venta'>
-            <div className='cont-filtros-venta'>
-                <BarraLateral/>
-            </div>
+            <h1>Propiedade en venta</h1>
+            {/* contenedor filtros y lista props */}
+            <div className='cont-filtros-listaProps'>
+                {/* filtros */}
+                <div className='cont-barraL'>
+                    <BarraLateral />
+                </div>
 
-            <div className='cont-titulo-props-venta'> 
-                <h1>Propiedades en Venta</h1>
-                <ListaPropiedades allProps={soloEnVenta} />
-            </div>            
+                {/* lista props */}
+                <div className='cont-listaProps'>
+                    <ListaPropiedades allProps={soloEnVenta} id='listaProps' />
+                </div>
+            </div>
         </div>
     )
 }

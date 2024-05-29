@@ -7,7 +7,7 @@ import FiltraPrecio from '../FIltroRangoPrecio';
 
 const BarraLateral = () => {
 
-    //estado para check venta
+    //estado para check venta/alq
     const [operacion, setTipo] = useState('all'); 
     const dispatch = useDispatch();
     

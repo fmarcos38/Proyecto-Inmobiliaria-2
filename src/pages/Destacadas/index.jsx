@@ -1,5 +1,4 @@
 import React from 'react';
-import './estilos.css';
 import { useSelector } from 'react-redux';
 import ListaPropiedades from '../../components/ListaPropiedades';
 import BarraLateral from '../../components/Barra-Lateral';
@@ -13,14 +12,19 @@ function PropsDestacadas() {
 
     return (
         <div className='cont-prop-Venta'>
-            <div className='cont-filtros-venta'>
-                <BarraLateral/>
-            </div>
+            <h1>Propiedade en venta</h1>
+            {/* contenedor filtros y lista props */}
+            <div className='cont-filtros-listaProps'>
+                {/* filtros */}
+                <div className='cont-barraL'>
+                    <BarraLateral />
+                </div>
 
-            <div className='cont-titulo-props-venta'> 
-                <h1>Propiedades Destacadas</h1>
-                <ListaPropiedades allProps={destacadas} />
-            </div>            
+                {/* lista props */}
+                <div className='cont-listaProps'>
+                    <ListaPropiedades allProps={destacadas} id='listaProps' />
+                </div>
+            </div>
         </div>
     )
 }
