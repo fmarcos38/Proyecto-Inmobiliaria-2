@@ -45,6 +45,7 @@ export default function rootReducer (state = initialState, action) {
                 ...state,
                 propiedades: propsF,
             };
+        
         case MUESTRA_DESTACADAS:
             let allProps = [...state.propiedades];
             const {operacionD, destacada} = action.payload;

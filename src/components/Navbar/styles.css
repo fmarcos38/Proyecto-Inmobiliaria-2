@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: center;    
     align-items: center;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--background-color);
 }
 .redes{
     width: 80%;
@@ -57,7 +57,7 @@ nav {
     display: flex;
     justify-content: center;    
     align-items: center;
-    background-color: #0c0c0c;
+    background-color: var(--background-color);
 }
 .cont-nav-inf{
     display: grid;
@@ -128,9 +128,9 @@ a, Link{
 }
 .menu-desplegable {
     position: absolute;
-    top: 80px;
+    top: 64px;
     right: 0;
-    background: rgb(53, 53, 53);
+    background: rgb(41, 40, 40);
     width: 200px;
     border-radius: 4px;
     overflow: hidden;

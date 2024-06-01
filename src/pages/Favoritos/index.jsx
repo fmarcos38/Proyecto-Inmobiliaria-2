@@ -22,9 +22,9 @@ function ListaFavoritos() {
         <div className='cont-gralFavoritos'>
             <div className='cont-titulo-listaFav'>
                 <h1>Tus propiedades favoritas</h1>
-                {
+                <div className='cont-props-fav'>
                     <ListaPropiedades allProps={newArrayFav} />
-                }
+                </div>
             </div>
         </div>
     )

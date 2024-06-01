@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(60, 61, 62);
+    background-color:chocolate;
 }
 .cont-titulo-listaFav{
     width: 80%;
@@ -10,4 +10,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width:500px){
+    .cont-titulo-listaFav{
+        font-size: 15px;
+        text-align: center;
+    }
 }

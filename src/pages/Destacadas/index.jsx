@@ -12,12 +12,12 @@ function PropsDestacadas() {
 
     return (
         <div className='cont-prop-Venta'>
-            <h1>Propiedade en venta</h1>
+            <h1>Propiedade Destacadas</h1>
             {/* contenedor filtros y lista props */}
             <div className='cont-filtros-listaProps'>
                 {/* filtros */}
                 <div className='cont-barraL'>
-                    <BarraLateral />
+                    <BarraLateral muestraVentaAlq={true}/>
                 </div>
 
                 {/* lista props */}

@@ -5,7 +5,7 @@ import './estilos.css';
 import FiltraPrecio from '../FIltroRangoPrecio';
 
 
-const BarraLateral = () => {
+const BarraLateral = ({muestraVentaAlq}) => {
 
     //estado para check venta/alq
     const [operacion, setTipo] = useState('all'); 
@@ -143,7 +143,9 @@ const BarraLateral = () => {
                 <p>Filtros</p>
             </div>
 
-            <div className='opc-venta-alq'>
+            {
+                muestraVentaAlq && (
+                    <div className='opc-venta-alq'>
                 <label>VENTA</label>
                 <input 
                     id='venta'
@@ -163,6 +165,8 @@ const BarraLateral = () => {
                         className='input-check-alq' 
                     />
             </div>
+                )
+            }
 
             <div className='cont-btn-filtros'>
                 <button className='boton-filtros' id='depto' onClick={(e) => handleClick(e)}>Deptos</button>

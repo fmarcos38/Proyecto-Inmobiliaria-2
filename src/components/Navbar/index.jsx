@@ -111,6 +111,18 @@ function NavbarConRedes() {
                                             <Link to='/alquiler' className='link-navbar'>Alquiler</Link>
                                         </li>
                                         <li className='items-pChica'>
+                                            <Link to='/alqTemp' className='link-navbar'>Alquiler Temporario</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/destacadas' className='link-navbar'>Destacadas</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/favoritos' className='link-navbar'>Favoritos</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/contacto' className='link-navbar'>Contacto</Link>
+                                        </li>
+                                        <li className='items-pChica'>
                                             <Link to='/nosotros' className='link-navbar'>Nosotros</Link>
                                         </li>
                                     </ul>
